@@ -10,3 +10,6 @@ Route::get('/', function () {
 
 Route::get('/jobs', [JobController::class, 'index']);
 Route::post('/create-job', [JobController::class, 'store']);
+Route::get('/edit-job/{id}', [JobController::class, 'edit', 'id']);
+Route::put('/edit-job', [JobController::class, 'update']);
+Route::delete('/delete-job', [JobController::class, 'delete']);
